@@ -1,0 +1,31 @@
+
+{% extends "index.html" %}
+{% load static %}
+
+{% block title %}NoLand Studio{% endblock %}
+
+{% block content %}
+    {% for categorieslink in categories %}
+        <div class="col-lg-3">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>{{ categorieslink.name }}</h2>
+                </div>
+            </div>
+            <div class="row">
+                {% for Homelink in homelinks %}
+                    {% if Homelink.categorie|stringformat:"s" == categorieslink.name|stringformat:"s" %}
+                        <a href="Curriculum_Vitae/{{ Homelink.path }}" class="col-lg-5"
+                        style="background:url({% static 'Home/images/' %}{{Homelink.path}}.jpg) no-repeat center center /cover">
+                            <div class="row">
+                                <div id="cadre" class="col-lg-12">
+                                    <h4>{{ Homelink.name }}</h4>
+                                </div>
+                            </div>
+                        </a>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}

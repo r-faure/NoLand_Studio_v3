@@ -1,0 +1,52 @@
+{% extends "home_cv.html" %}
+{% load static %}
+{% block title %}
+    {% for Profile in profiles %}
+    <a href="#{{ Profile.path }}" class="{{ Profile.fa_icone }}"><span class="label">{{ Profile.first_name }} {{ Profile.name }}</span></a>
+    {% endfor %}
+{% endblock %}
+
+{% block content %}
+    {% for Profile in profiles %}
+        <article id="{{ Profile.path }}" class="panel intro">
+            <header>
+                <h1>{{ Profile.first_name }} {{ Profile.name }}</h1>
+                <p>{{ Profile.job }}</p>
+                <p><a href="#{{ Profile.path }}" ><span class="label">See more about me</span></a></p>
+            </header>
+            <a href="#{{ Profile.path }}" class="jumplink pic">
+                <!--<span class="arrow icon solid fa-chevron-right"><span>See more</span></span>-->
+                <img src="{% static 'Curriculum_Vitae/images/'%}{{ Profile.path }}.jpg" alt="" />
+            </a>
+        </article>
+    {% endfor %}
+{% endblock %}
+
+
+<!-- Contact 
+<article id="contact" class="panel">
+    <header>
+        <h2>Contact Me</h2>
+    </header>
+    <form action="#" method="post">
+        <div>
+            <div class="row">
+                <div class="col-6 col-12-medium">
+                    <input type="text" name="name" placeholder="Name" />
+                </div>
+                <div class="col-6 col-12-medium">
+                    <input type="text" name="email" placeholder="Email" />
+                </div>
+                <div class="col-12">
+                    <input type="text" name="subject" placeholder="Subject" />
+                </div>
+                <div class="col-12">
+                    <textarea name="message" placeholder="Message" rows="6"></textarea>
+                </div>
+                <div class="col-12">
+                    <input type="submit" value="Send Message" />
+                </div>
+            </div>
+        </div>
+    </form>
+</article>-->

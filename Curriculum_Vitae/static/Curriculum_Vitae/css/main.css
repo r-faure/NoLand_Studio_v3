@@ -1,0 +1,17 @@
+.container-fluid{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Nunito;
+}
+
+#menu{
+    background-color: #8a2be2;
+    height: 100%;
+    position: fixed;
+}
+
+#user_image img{
+    
+    border-radius: 100%;
+}

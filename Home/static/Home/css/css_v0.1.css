@@ -1,0 +1,79 @@
+.selector-for-some-widget {
+    box-sizing: content-box;
+  }
+
+body{
+  background-color: #222222;
+  background: repeating-linear-gradient(45deg, #2b2b2b 0%, #2b2b2b 10%, #222222 0%, #222222 50%) 0 / 15px 15px;
+}
+
+.container-fluid {
+  width: 100%;
+  padding: 0;
+}
+
+[class*="col-"] {
+    text-align: center;
+    margin: auto;
+    color:  #FFF;
+    font-family: Nunito;
+  }
+
+[class*="col-lg-3"] {
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-top: 70px ;
+  }
+
+[class*="col-lg-5"] {
+    margin-bottom: 10px;
+    height: 175px;
+  }
+
+[class*="col-lg-5"]:hover {
+    opacity: 0.5;
+  }
+
+[class*="col-lg-5"] a {
+    margin-bottom: 10px;
+    height: 175px;
+  }
+
+h1{
+    margin: 40px 0 0 0;
+    font-size: 6em;
+    color: #FFF;
+    font-family: Monoton;
+    -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+    animation: neon1 1.5s ease-in-out infinite alternate;
+}
+
+h2{
+  font-size: 2em;
+}
+
+h3{
+  font-size: 1em;
+}
+
+h4{
+  font-size: 1em;
+}
+
+#cadre{
+  padding: 10px 0 0 0;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+@-webkit-keyframes neon1 {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #0011ff, 0 0 70px #0011ff, 0 0 80px #0011ff, 0 0 100px #0011ff, 0 0 150px #0011ff;
+    }
+    to {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #0011ff, 0 0 35px #0011ff, 0 0 40px #0011ff, 0 0 50px #0011ff, 0 0 75px #0011ff;
+    }
+  }
